@@ -5,7 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap"
+      rel="stylesheet"
+    />
+    <!-- ヘッダーのフォント -->
     <link href="./safety-chart.css" rel="stylesheet" />
+    <link rel="stylesheet" href="table.css" />
     <title>Document</title>
   </head>
 
@@ -15,10 +23,10 @@
         <div class="header-inner">
           <div class="logo">LOGO</div>
           <div class="tabs">
-            <div class="tab1">tab1</div>
-            <div class="tab2">tab2</div>
-            <div class="tab3">tab3</div>
-            <div class="tab4">tab4</div>
+            <div class="tab1">お知らせ</div>
+            <div class="tab2">対処行為</div>
+            <div class="tab3">避難所確認</div>
+            <div class="tab4">非常食</div>
           </div>
 
           <div class="header-right">
@@ -30,7 +38,7 @@
       <!-- -----------------------------------ここまで header ----------------------- -->
       <div class="left-letter">
         <div class="left-letter-inner">
-          <h1>安否表</h1>
+          <p class="letter">安否表</p>
         </div>
       </div>
 
@@ -53,12 +61,12 @@
                       class="selected"
                       type="text"
                       name="name"
-                      placeholder="検索"
+                      placeholder="検索をする言葉を入力してください。"
                     />
                   </div>
                   <div class="r-submit">
                     <!-- <input class="r-button" type="submit" value="送信" /> -->
-                    <button><img src="./image/search.png" alt="" /></button>
+                    <button>検索</button>
                   </div>
                 </div>
               </form>

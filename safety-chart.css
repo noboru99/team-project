@@ -21,7 +21,7 @@ body {
 
   border-bottom: 1px solid yellowgreen;
   /* background-color: darkgrey; */
-  color: white;
+  /* color: white; */
 }
 
 .header > .header-inner {
@@ -32,7 +32,7 @@ body {
   display: flex;
 
   justify-content: space-between;
-  background-color: darkgrey;
+  /* background-color: darkgrey; */
 }
 
 .header > .header-inner > .logo {
@@ -43,6 +43,7 @@ body {
   display: flex;
 
   align-items: flex-end;
+  background-color: aqua;
 
   font-size: 50px;
 }
@@ -56,15 +57,16 @@ body {
 
   align-items: flex-end;
 
-  width: 400px;
+  width: 700px;
 }
 
 .header > .header-inner > .tabs > div {
-  width: 100px;
+  width: 150px;
 
-  margin-left: 33px;
+  margin-left: 18px;
 
   font-size: 20px;
+  font-family: "Tilt Neon", cursive;
 }
 
 .header > .header-inner > .header-right {
@@ -75,19 +77,34 @@ body {
 
 .header > .header-inner > .header-right > div {
   width: 100px;
+  height: 100px;
 }
-
+.left-letter {
+  margin: auto 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-bottom: 3px solid greenyellow;
+}
+.left-letter > .left-letter-inner {
+  width: 200px;
+  height: 100px;
+}
+.left-letter > .left-letter-inner > .letter {
+  font-size: 40px;
+  font-family: "Tilt Neon", cursive;
+}
 /* !!!!!!!!!!!⇧--ヘッダー--⇧!!!!!!!!!!! */
 
-.container > h1 {
+/* .container > h1 {
   margin-top: 10px;
 
   margin-left: 30px;
-}
+} */
 
 /* !!!!!!!!!!!!⇩--table--⇩!!!!!!!!!!!! */
 
-.container-list,
+/* .container-list,
 .container-cnt {
   text-align: center;
 
@@ -95,7 +112,7 @@ body {
 
   table-layout: auto;
 
-  /* -----⇩--table内スクロール設定--⇩---- */
+  -----⇩--table内スクロール設定--⇩----
 
   max-height: 430px;
 
@@ -103,18 +120,9 @@ body {
 
   overflow-y: scroll;
 
-  /* -----⇧--table内スクロール設定--⇧---- */
+  -----⇧--table内スクロール設定--⇧----
 }
-.left-letter {
-  margin: auto 0;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-.left-letter > .left-letter-inner {
-  width: 100px;
-  height: 100px;
-}
+
 .container-list {
   margin: 10px;
 
@@ -144,27 +152,33 @@ body {
   background: rgb(197, 250, 91);
 
   border: solid 1px;
+  border-collapse: collapse;
 
   position: sticky;
+  border-bottom: 2px solid black;
+  border-top: 2px solid black;
 
   top: -10px;
 
   z-index: 1;
 }
-
+.container-middle > .container-middle-inner > .container-list > table {
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid;
+}
 .container-cnt th {
   background: rgb(27, 223, 17);
-}
-
+} */
+/* 
 .container-list td,
 .container-cnt td {
-  border: solid 1px;
-
-  padding: 10px;
-}
+  border: solid 1px; */
+/* padding: 10px;
+} */
 
 /* !!!!!!!!!!!!⇧--table--⇧!!!!!!!!!!!! */
-
 .border > .border-inner > .research {
   display: flex;
   justify-content: center;
@@ -176,7 +190,8 @@ body {
 }
 .border > .border-inner > .research > .research-inner > form > .section {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
+  margin-left: 20px;
 }
 .border > .border-inner > .research > .research-inner > form > .section > div {
   margin-left: 10px;
@@ -194,19 +209,7 @@ body {
   border-radius: 10px;
   border-color: greenyellow;
 }
-.border
-  > .border-inner
-  > .research
-  > .research-inner
-  > form
-  > .section
-  > div
-  > button
-  > img {
-  width: 30px;
-  height: 30px;
-  background: none;
-}
+
 .border
   > .border-inner
   > .research
@@ -215,8 +218,10 @@ body {
   > .section
   > div
   > button {
+  width: 50px;
+  height: 30px;
+  background-color: rgb(0, 255, 127);
   border: none;
-  background: none;
 }
 .border
   > .border-inner
@@ -227,7 +232,7 @@ body {
   > div
   > .selected {
   border-color: rgb(27, 223, 17);
-  width: 200px;
+  width: 300px;
   height: 30px;
 }
 .container-middle {
