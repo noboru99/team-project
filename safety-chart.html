@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="./safety-chart.css" rel="stylesheet" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="header-inner">
+          <div class="logo">LOGO</div>
+          <div class="tabs">
+            <div class="tab1">tab1</div>
+            <div class="tab2">tab2</div>
+            <div class="tab3">tab3</div>
+            <div class="tab4">tab4</div>
+          </div>
+
+          <div class="header-right">
+            <div class="log-out">LOGOUT</div>
+            <div class="imfom-rectify">個人情報</div>
+          </div>
+        </div>
+      </div>
+      <!-- -----------------------------------ここまで header ----------------------- -->
+      <div class="left-letter">
+        <div class="left-letter-inner">
+          <h1>安否表</h1>
+        </div>
+      </div>
+
+      <div class="border">
+        <div class="border-inner">
+          <div class="research">
+            <div class="research-inner">
+              <form action="" method="GET">
+                <div class="section">
+                  <div>
+                    <select class="category" name="category">
+                      <option value="1" selected>営業部</option>
+                      <option value="2">人事部</option>
+                      <option value="2">経理部</option>
+                      <option value="2">総務部</option>
+                    </select>
+                  </div>
+                  <div>
+                    <input
+                      class="selected"
+                      type="text"
+                      name="name"
+                      placeholder="検索"
+                    />
+                  </div>
+                  <div class="r-submit">
+                    <!-- <input class="r-button" type="submit" value="送信" /> -->
+                    <button><img src="./image/search.png" alt="" /></button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <!-- ----------------------ここから安否表------------------------ -->
+          <div class="container-middle">
+            <div class="container-middle-inner">
+              <div class="container-list">
+                <table>
+                  <thead class="fixed">
+                    <tr>
+                      <th>所属</th>
+                      <th>名前</th>
+                      <th>安否</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>営業部</td>
+                      <td>片山 美結</td>
+                      <td>○</td>
+                    </tr>
+                    <tr>
+                      <td>営業部</td>
+                      <td>片山 美結</td>
+                      <td>-</td>
+                    </tr>
+
+                    <tr>
+                      <td>営業部</td>
+                      <td>片山 美結</td>
+                      <td>○</td>
+                    </tr>
+                    <tr>
+                      <td>営業部</td>
+                      <td>片山 美結</td>
+                      <td>○</td>
+                    </tr>
+                    <tr>
+                      <td>営業部</td>
+                      <td>片山 美結</td>
+                      <td>-</td>
+                    </tr>
+
+                    <tr>
+                      <td>営業部</td>
+                      <td>片山 美結</td>
+                      <td>○</td>
+                    </tr>
+                    <tr>
+                      <td>営業部</td>
+                      <td>片山 美結</td>
+                      <td>○</td>
+                    </tr>
+                    <tr>
+                      <td>営業部</td>
+                      <td>片山 美結</td>
+                      <td>-</td>
+                    </tr>
+
+                    <tr>
+                      <td>営業部</td>
+                      <td>片山 美結</td>
+                      <td>○</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="container-cnt">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>所属</th>
+                      <th>確認済数/総数</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>営業部</td>
+                      <td>4/10</td>
+                    </tr>
+                    <tr>
+                      <td>人事部</td>
+                      <td>12/20</td>
+                    </tr>
+                    <tr>
+                      <td>経理部</td>
+                      <td>15/22</td>
+                    </tr>
+                    <tr>
+                      <td>総務部</td>
+                      <td>4/10</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="footer-inner">This is a footer</div>
+    </footer>
+  </body>
+</html>

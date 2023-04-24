@@ -1,0 +1,261 @@
+body {
+  margin: 0;
+
+  padding: 0;
+}
+
+/* !!!!!!!!!!!!⇩--ヘッダー--⇩!!!!!!!!!!!! */
+
+.header {
+  margin: auto 0;
+
+  width: 100%;
+
+  height: 100px;
+
+  margin-top: 20px;
+
+  display: flex;
+
+  justify-content: center;
+
+  border-bottom: 1px solid yellowgreen;
+  /* background-color: darkgrey; */
+  color: white;
+}
+
+.header > .header-inner {
+  width: 1200px;
+
+  height: 100px;
+
+  display: flex;
+
+  justify-content: space-between;
+  background-color: darkgrey;
+}
+
+.header > .header-inner > .logo {
+  width: 300px;
+
+  height: 100px;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  font-size: 50px;
+}
+
+.header > .header-inner > .logo > .logo-text {
+  font-size: 30px;
+}
+
+.header > .header-inner > .tabs {
+  display: flex;
+
+  align-items: flex-end;
+
+  width: 400px;
+}
+
+.header > .header-inner > .tabs > div {
+  width: 100px;
+
+  margin-left: 33px;
+
+  font-size: 20px;
+}
+
+.header > .header-inner > .header-right {
+  display: flex;
+
+  align-items: flex-end;
+}
+
+.header > .header-inner > .header-right > div {
+  width: 100px;
+}
+
+/* !!!!!!!!!!!⇧--ヘッダー--⇧!!!!!!!!!!! */
+
+.container > h1 {
+  margin-top: 10px;
+
+  margin-left: 30px;
+}
+
+/* !!!!!!!!!!!!⇩--table--⇩!!!!!!!!!!!! */
+
+.container-list,
+.container-cnt {
+  text-align: center;
+
+  border: solid 1px;
+
+  table-layout: auto;
+
+  /* -----⇩--table内スクロール設定--⇩---- */
+
+  max-height: 430px;
+
+  height: auto;
+
+  overflow-y: scroll;
+
+  /* -----⇧--table内スクロール設定--⇧---- */
+}
+.left-letter {
+  margin: auto 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.left-letter > .left-letter-inner {
+  width: 100px;
+  height: 100px;
+}
+.container-list {
+  margin: 10px;
+
+  padding: 10px;
+
+  width: 700px;
+
+  float: left;
+}
+
+.container-cnt {
+  margin: 10px;
+
+  padding: 10px;
+
+  width: 300px;
+
+  float: right;
+}
+
+.container-list th,
+.container-cnt th {
+  padding: 5px;
+
+  width: 700px;
+
+  background: rgb(197, 250, 91);
+
+  border: solid 1px;
+
+  position: sticky;
+
+  top: -10px;
+
+  z-index: 1;
+}
+
+.container-cnt th {
+  background: rgb(27, 223, 17);
+}
+
+.container-list td,
+.container-cnt td {
+  border: solid 1px;
+
+  padding: 10px;
+}
+
+/* !!!!!!!!!!!!⇧--table--⇧!!!!!!!!!!!! */
+
+.border > .border-inner > .research {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+.border > .border-inner > .research > .research-inner {
+  width: 1200px;
+}
+.border > .border-inner > .research > .research-inner > form > .section {
+  display: flex;
+  justify-content: flex-end;
+}
+.border > .border-inner > .research > .research-inner > form > .section > div {
+  margin-left: 10px;
+}
+.border
+  > .border-inner
+  > .research
+  > .research-inner
+  > form
+  > .section
+  > div
+  > select {
+  width: 150px;
+  height: 40px;
+  border-radius: 10px;
+  border-color: greenyellow;
+}
+.border
+  > .border-inner
+  > .research
+  > .research-inner
+  > form
+  > .section
+  > div
+  > button
+  > img {
+  width: 30px;
+  height: 30px;
+  background: none;
+}
+.border
+  > .border-inner
+  > .research
+  > .research-inner
+  > form
+  > .section
+  > div
+  > button {
+  border: none;
+  background: none;
+}
+.border
+  > .border-inner
+  > .research
+  > .research-inner
+  > form
+  > .section
+  > div
+  > .selected {
+  border-color: rgb(27, 223, 17);
+  width: 200px;
+  height: 30px;
+}
+.container-middle {
+  margin: auto 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.container-middle > .container-middle-inner {
+  width: 1200px;
+}
+.border {
+  margin: auto 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.border > .border-inner {
+  border: 10px solid greenyellow;
+  width: 1200px;
+}
+footer {
+  margin: auto 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+footer > .footer-inner {
+  width: 1200px;
+  height: 200px;
+}
