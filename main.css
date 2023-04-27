@@ -9,8 +9,6 @@ body {
   margin-top: 20px;
   display: flex;
   justify-content: center;
-  border-bottom: 1px solid yellowgreen;
-  background-image: url("./image/headerback.png");
 }
 .header > .header-inner {
   width: 1200px;
