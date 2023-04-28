@@ -5,6 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap"
+      rel="stylesheet"
+    />
+    <!-- 上は재난최근정보글꼴 -->
 
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -13,8 +20,13 @@
       <div class="inner">
         <div class="box">
           <div></div>
+          <div style="width: 300px"></div>
           <div class="logo">LOGO</div>
-          <div class="log-out">logout</div>
+          <!-- <div class="header-button"><button>安否登録</button></div> -->
+          <div class="log-out">
+            <div><button>今すぐ安否登録する！</button></div>
+            <div>logout</div>
+          </div>
         </div>
       </div>
     </header>
@@ -28,35 +40,47 @@
         <div class="box">
           <div class="left-box">
             <div class="news-title">災難安全　状況情報</div>
-            <ul>
-              <li>
-                <span>특보</span>
-                도쿄지진
-              </li>
-              <li><span>특보</span> 오사카 지진</li>
-              <li><span>특보</span> 나고야 지진</li>
-              <li><span>특보</span> 교토 문제없음</li>
-            </ul>
+            <div class="news">
+              <ul>
+                <li>
+                  <p class="title">速報</p>
+                  <p class="text" style="color: red">
+                    2023/04/27 18:52:03
+                    原州市で行方不明になったキム·ホンリョルさん(男、94歳)を
+                    さがしています
+                  </p>
+                </li>
+                <li>
+                  <p class="title">速報</p>
+                  <p class="text">
+                    2023/04/27 18:52:03
+                    原州市で行方不明になったキム·ホンリョルさん(男、
+                  </p>
+                </li>
+                <li>
+                  <p class="title">速報</p>
+                  <p class="text">2023/04/27 18:52:03 原州市で行方</p>
+                </li>
+                <li>
+                  <p class="title">速報</p>
+                  <p class="text">
+                    2023/04/27 18:52:03
+                    原州市で行方不明になったキム·ホンリョルさん(男、94歳)
+                  </p>
+                </li>
+              </ul>
+            </div>
           </div>
           <div class="right-box">
-            <div class="box-header">
-              安否の確認を行ってください。※は必ずやってください。
-            </div>
-            <div class="box-middle">
-              <p>※安否確認</p>
-              <input type="radio" />安全<input type="radio" />ピンチ
-
-              <p>※ケガ</p>
-              <input type="radio" />ケガしてる<input type="radio" />元気
-
-              <p>※出社</p>
-              <input type="radio" />可能<input type="radio" />不可能
-            </div>
-
-            <div class="box-button">
-              <p>上記の以外に伝えたいことがあればご記入ください。</p>
-              <textarea name="" id="" cols="25" rows="5"> </textarea>
-            </div>
+            <iframe
+              width="500"
+              height="300"
+              src="https://www.youtube.com/embed/rGrKEjXvSQA"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
           </div>
         </div>
       </div>
@@ -71,7 +95,10 @@
                 alt=""
                 style="width: 100px; height: 100px"
               />
-              <p>비상연락망</p>
+              <p>
+                部署別安否登録 <br />
+                リスト
+              </p>
             </div>
             <span id="line"></span>
             <div class="img-right">
@@ -80,18 +107,44 @@
                 alt=""
                 style="width: 100px; height: 100px"
               />
-              <p>비상연락망</p>
+              <p>
+                部署別 <br />
+                緊急連絡先
+              </p>
             </div>
           </div>
           <div class="middle-right">
-            <ul>
-              <p>安否の確認</p>
-              <li>藤田昇さんの安否が確認できました　時間</li>
-              <li>藤田昇さんの安否が確認できました　時間</li>
-              <li>藤田昇さんの安否が確認できました　時間</li>
-              <li>藤田昇さんの安否が確認できました　時間</li>
-              <li>藤田昇さんの安否が確認できました　時間</li>
-            </ul>
+            <table>
+              <thead>
+                <tr>
+                  <th>内容</th>
+                  <th>日時</th>
+                  <th>状況</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>藤田昇さんが安否登録を行いました。</td>
+                  <td>2023-02-02</td>
+                  <td>危険</td>
+                </tr>
+                <tr>
+                  <td>藤田昇さんが安否登録を行いました。</td>
+                  <td>2023-02-02</td>
+                  <td>危険</td>
+                </tr>
+                <tr>
+                  <td>藤田昇さんが安否登録を行いました。</td>
+                  <td>2023-02-02</td>
+                  <td>危険</td>
+                </tr>
+                <tr>
+                  <td>藤田昇さんが安否登録を行いました。</td>
+                  <td>2023-02-02</td>
+                  <td>危険</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
@@ -100,32 +153,17 @@
       <div class="inner">
         <div class="box">
           <div class="box-left">
-            <div class="left-text-box">
-              <div class="left-title"><h3>災難発生し行動</h3></div>
-              <div class="list-box">
-                <ul>
-                  <li><div>自然災難</div></li>
-                  <li><div>テーラー</div></li>
-                  <li><div>社会災難</div></li>
-                  <li><div>非常連絡</div></li>
-                </ul>
+            <div class="text-box">
+              <div class="text">
+                災害発生時<br />安全行動要領 <br />前もって確認しましょう
               </div>
             </div>
           </div>
           <div class="box-middle">
-            <div class="middle-text-box">
-              <div class="middle-title"><h3>災難発生し行動</h3></div>
-              <div class="list-box">
-                <ul>
-                  <li><div>自然災難</div></li>
-                  <li><div>テーラー</div></li>
-                  <li><div>社会災難</div></li>
-                  <li><div>非常連絡</div></li>
-                </ul>
-              </div>
+            <div class="text-box">
+              <div class="text">最寄りの避難場所を覚えておこう</div>
             </div>
           </div>
-          <div class="box-right"></div>
         </div>
       </div>
     </div>

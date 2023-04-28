@@ -6,31 +6,31 @@
 }
 .container-middle > .container-middle-inner {
   margin-top: 30px;
-  width: 1200px;
+  width: 1600px;
   height: 800px;
   /* border: 1px solid black; */
-  display: flex;
-  justify-content: space-around;
+  position: relative;
+  /* justify-content: space-around; */
 }
+
 .container-middle > .container-middle-inner > .container-list {
-  width: 700px;
+  width: 1200px;
   height: 600px;
   /* border: 1px red solid; */
 }
 
 .container-middle > .container-middle-inner > .container-list > table {
-  width: 600px;
-  height: 600px;
-}
-.container-middle > .container-middle-inner > .container-list > table {
   border-collapse: collapse;
   border-left: 1px solid black;
   border-right: 1px solid black;
   border-top: 3px solid black;
   border-bottom: 3px solid black;
   text-align: center;
-  width: 700px;
+  margin: 10px 10px;
+  width: 1200px;
+  height: 600px;
 }
+
 .container-middle
   > .container-middle-inner
   > .container-list
@@ -41,14 +41,13 @@
   border-bottom: 3px solid black;
   height: 30px;
 }
-.container-middle
+/* .container-middle
   > .container-middle-inner
   > .container-list
   > table
   > tbody
   > tr {
-  height: 30px;
-}
+} */
 .container-middle
   > .container-middle-inner
   > .container-list
@@ -57,7 +56,6 @@
   > tr
   > td {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  height: 25px;
 }
 .container-middle
   > .container-middle-inner
@@ -77,55 +75,39 @@
   > tr:nth-child(even) {
   background-color: whitesmoke;
 }
-.container-middle > .container-middle-inner > .container-cnt {
-  width: 400px;
-  height: 600px;
-  /* border: 1px red solid; */
+
+.container-cnt {
+  position: fixed;
+  right: 0;
+  top: 120px;
 }
-.container-middle > .container-middle-inner > .container-cnt > table {
+.container-cnt > table {
   border-collapse: collapse;
   border-left: 1px solid black;
   border-right: 1px solid black;
   border-top: 3px solid black;
   border-bottom: 3px solid black;
+  position: sticky;
+  right: 0;
   text-align: center;
   width: 400px;
 }
-.container-middle
-  > .container-middle-inner
-  > .container-cnt
-  > table
-  > thead
-  > tr
-  > th {
+.container-cnt > table > thead > tr > th {
   border-bottom: 3px solid black;
   height: 30px;
 }
-.container-middle
-  > .container-middle-inner
-  > .container-cnt
-  > table
-  > tbody
-  > tr
-  > td {
+.container-cnt > table > tbody > tr > td {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  height: 100%;
+}
+.container-cnt > table > tbody > tr > td {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   height: 25px;
 }
-.container-middle
-  > .container-middle-inner
-  > .container-cnt
-  > table
-  > tbody
-  > tr
-  > td:nth-child(even) {
+.container-cnt > table > tbody > tr > td:nth-child(even) {
   border-left: 1px solid black;
   border-right: 1px solid black;
 }
-.container-middle
-  > .container-middle-inner
-  > .container-cnt
-  > table
-  > tbody
-  > tr:nth-child(even) {
-  background-color: whitesmoke;
+.container-cnt > table > tbody > tr:nth-child(even) {
+  background-color: rgb(172, 220, 239);
 }
