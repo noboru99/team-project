@@ -8,12 +8,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap"
+      href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@700&family=Tilt+Neon&display=swap"
       rel="stylesheet"
     />
-    <!-- ヘッダーのフォント -->
+    <!-- title-font -->
     <link href="./safety-chart.css" rel="stylesheet" />
-
     <title>Document</title>
   </head>
 
@@ -36,7 +35,28 @@
     <section>
       <div class="section-inner">
         <div class="research-box">
-          <div class="research"></div>
+          <div class="research">
+            <div class="select-box">
+              <select class="category" name="category">
+                <option value="1" selected>名前</option>
+                <option value="2">社員番号</option>
+                <option value="2">生年月日</option>
+                <option value="2">色んな</option>
+              </select>
+            </div>
+
+            <div class="input-box">
+              <input
+                class="selected"
+                type="text"
+                name="name"
+                placeholder="検索をする言葉を入力してください。"
+              />
+            </div>
+            <div class="button-box">
+              <button>検索</button>
+            </div>
+          </div>
         </div>
         <div class="table-box">
           <div class="left-table">

@@ -16,6 +16,59 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="safety">
+      <form action="" id="safety-form">
+        <div class="safety-box">
+          <div class="safety-header">
+            安否の確認を行ってください。※は必ずやってください。
+          </div>
+          <div class="safety-middle">
+            <p>※安否確認</p>
+            <input type="radio" name="safety" value="safety-yes" id="radio1" />
+            <label for="radio1">radio button</label>
+            <input type="radio" name="safety" value="safety-no" id="radio2" />
+            <label for="radio2">radio button</label>
+
+            <p>※安否確認</p>
+            <input type="radio" name="safety" value="safety-yes" id="radio1" />
+            <label for="radio1">radio button</label>
+            <input type="radio" name="safety" value="safety-no" id="radio2" />
+            <label for="radio2">radio button</label>
+
+            <p>※安否確認</p>
+            <input type="radio" name="safety" value="safety-yes" id="radio1" />
+            <label for="radio1">radio button</label>
+            <input type="radio" name="safety" value="safety-no" id="radio2" />
+            <label for="radio2">radio button</label>
+          </div>
+          <div class="safety-bottom">
+            <p>上記の以外に伝えたいことがあればご記入ください。</p>
+            <textarea name="" id="" cols="60" rows="10"> </textarea>
+          </div>
+          <div class="safety-button">
+            <div class="safety-yes">
+              <button type="submit" id="safety-yes-Btn">はい</button>
+            </div>
+            <div class="line"></div>
+            <div class="safety-no">
+              <button id="safety-no-Btn">いいえ</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="modal-back"></div>
+    <div class="modal-box">
+      <div class="modal">
+        <div class="modal-head">今、あなたは危険な状況ですか</div>
+        <div class="modal-text">すぐ安否登録を行いますか？</div>
+        <div class="modal-button">
+          <div class="Yes-btn"><button id="Yes-btn">はい</button></div>
+          <div class="line"></div>
+          <div class="No-btn"><button id="No-btn">いいえ</button></div>
+        </div>
+      </div>
+    </div>
     <header>
       <div class="inner">
         <div class="box">
@@ -30,6 +83,7 @@
         </div>
       </div>
     </header>
+
     <nav style="background-color: #314178">
       <marquee
         behavior="scroll"
@@ -179,5 +233,6 @@
       </div>
     </div>
     <footer></footer>
+    <script src="main.js"></script>
   </body>
 </html>

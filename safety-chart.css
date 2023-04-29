@@ -20,7 +20,28 @@ header > .inner > .box {
   align-items: center;
   height: 80px;
 }
+/* -----------------------------------------header--------------------- */
 
+.title {
+  width: 100%;
+  height: 100px;
+  /* background-color: antiquewhite; */
+  display: flex;
+  justify-content: center;
+  background-color: aqua;
+}
+.title > .title-inner {
+  width: 1200px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title > .title-inner > p {
+  font-size: 60px;
+  font-family: "BIZ UDPGothic", sans-serif;
+  font-family: "Tilt Neon", cursive;
+}
 section {
   width: 100%;
   display: flex;
@@ -34,9 +55,39 @@ section > .section-inner {
   align-items: center;
 }
 section > .section-inner > .research-box {
-  width: 600px;
+  margin-right: 300px;
+}
+section > .section-inner > .research-box > .research {
+  width: 800px;
   height: 100px;
-  background-color: blue;
+  /* border: 1px solid black; */
+  display: flex;
+  align-items: center;
+}
+/* section > .section-inner > .research-box > .research > div {
+  margin-right: 20px;
+} */
+section > .section-inner > .research-box > .research > .select-box {
+  width: 200px;
+}
+section > .section-inner > .research-box > .research > .select-box > select {
+  width: 150px;
+  height: 40px;
+  border-radius: 10px;
+}
+section > .section-inner > .research-box > .research > .input-box {
+  width: 260px;
+}
+section > .section-inner > .research-box > .research > .input-box > input {
+  width: 250px;
+  height: 36px;
+}
+section > .section-inner > .research-box > .research > .button-box {
+  width: 100px;
+}
+section > .section-inner > .research-box > .research > .button-box > button {
+  width: 60px;
+  height: 40px;
 }
 /*------------------------ table-box----------------------------- */
 
@@ -50,12 +101,15 @@ section > .section-inner > .table-box {
 section > .section-inner > .table-box > .left-table {
   width: 200px;
   height: 400px;
+  /* position: relative; */
 }
 section > .section-inner > .table-box > .left-table > table {
   text-align: center;
   width: 150px;
   height: 400px;
   border: 1px solid black;
+  /* position: fixed;
+  top: 240px; */
 }
 section > .section-inner > .table-box > .middle-table {
   width: 1000px;
