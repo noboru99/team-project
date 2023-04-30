@@ -1,7 +1,6 @@
 let modalBox = document.querySelector(".modal-box");
 let modalBack = document.querySelector(".modal-back");
 let modalRight = -100;
-let modalMove = setInterval(rightMove, 10);
 let modalYesBtn = document.getElementById("Yes-btn");
 let modalNoBtn = document.getElementById("No-btn");
 // --------------------------------------
@@ -15,14 +14,10 @@ nowBtn.addEventListener("click", () => {
   modalBack.style.display = "block";
   safetyBox.style.display = "block";
 });
-function rightMove() {
-  if (modalRight >= -10) {
-    clearInterval(modalMove);
-  } else {
-    modalRight += 1;
-    modalBox.style.right = modalRight + "%";
-  }
-}
+
+setTimeout(() => {
+  modalBox.style.right = "0";
+}, 100);
 console.log(checkbox);
 
 modalNoBtn.addEventListener("click", modalClear);
@@ -44,6 +39,8 @@ safetyYesBtn.addEventListener("click", () => {
   alert("登録完了");
   safetyBox.style.display = "none";
   modalBack.style.display = "none";
+  // safetyYesBtn.addEventListener("click", hideDivForDay);
+  hideDivForDay();
 });
 
 safetyNoBtn.addEventListener("click", safetyBoxClear);
