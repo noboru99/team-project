@@ -1,134 +1,175 @@
 body {
-  margin: auto 0;
+  margin: 0;
   padding: 0;
 }
-.bodyInner {
+.main-box {
+  width: 100%;
+  height: 800px;
   display: flex;
   justify-content: center;
-  position: relative;
+  /* background-color: #2a4383; */
+  background-color: rgb(2, 29, 73);
 }
-.bodyInner > .mainBox {
-  width: 1200px;
+.main-box > .inner {
+  width: 1400px;
+  height: 500px;
+  /* background-color: aqua; */
   display: flex;
-  justify-content: space-around;
-  position: absolute;
-  top: 500px;
+  justify-content: center;
 }
-.bodyInner > .mainBox > .left-letter {
-  width: 500px;
-
-  text-align: end;
-  margin-right: 100px;
+.main-box > .inner > .textbox {
+  margin-top: 200px;
+  width: 700px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: aquamarine; */
 }
-.bodyInner > .mainBox > .left-letter > .left-letter-inner {
-  font-size: 50px;
-  width: 500px;
+.main-box > .inner > .textbox > .text-inner {
+  width: 700px;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
-.bodyInner > .mainBox > .left-letter > .left-letter-inner > div {
-  margin-bottom: 20px;
+.main-box > .inner > .textbox > .text-inner > .welcomText {
+  width: 700px;
+  height: 100px;
+  /* background-color: blue; */
+  font-size: 40px;
+  font-family: "BIZ UDPGothic", sans-serif;
+  font-family: "Tilt Neon", cursive;
+  font-weight: bold;
+  color: white;
 }
-.put {
-  opacity: 0;
+.main-box > .inner > .textbox > .text-inner > .main-text {
+  width: 700px;
+  height: 100px;
+  /* background-color: red; */
+  font-size: 30px;
+  font-family: "BIZ UDPGothic", sans-serif;
+  font-family: "Tilt Neon", cursive;
+  color: white;
 }
-.safety {
-  opacity: 0;
+.main-box > .inner > .textbox > .text-inner > .bottom-text {
+  width: 700px;
+  height: 100px;
+  /* background-color: yellow; */
+  font-size: 20px;
+  line-height: 5;
+  color: white;
 }
-.first {
-  opacity: 0;
+.main-box > .inner > .textbox > .text-inner > .login-text {
+  width: 700px;
+  height: 100px;
+  /* background-color: green; */
+  font-size: 20px;
+  color: white;
 }
-
-.bodyInner > .mainBox > .Login-Box {
+/* ----------------로그인박스 ---------------------*/
+.login-box {
   width: 400px;
-  height: 460px;
-  backdrop-filter: blur(5px);
-  background-color: rgba(255, 255, 192, 0.1);
-  box-shadow: 2px 7px 15px 8px rgba(0, 0, 0, 0.5);
-  /* border: 1px solid black; */
-  text-align: center;
-  border-radius: 20px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
+}
+.login-box > .login-inner {
+  width: 400px;
+  height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-color: white;
 }
-.bodyInner > .mainBox > .Login-Box > .login-text {
+.login-box > .login-inner > .login-header {
+  width: 400px;
+  height: 100px;
+  /* background-color: antiquewhite; */
   font-size: 30px;
-  height: 80px;
+  font-family: "BIZ UDPGothic", sans-serif;
+  font-family: "Tilt Neon", cursive;
   font-weight: bold;
+  color: #3c447d;
+  text-align: center;
+  margin-top: 20px;
 }
-.bodyInner > .mainBox > .Login-Box > .Login-Box-inner {
+
+.login-box > .login-inner > .hidden-box {
+  width: 400px;
+  height: 50px;
+  background-color: whitesmoke;
+  visibility: hidden;
+}
+.login-box > .login-inner > .login-middle {
+  width: 400px;
   height: 300px;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
 }
-.bodyInner > .mainBox > .Login-Box > .Login-Box-inner > .form > .ID-Box {
-  /* border: 1px solid black; */
-  font-size: 24px;
-  height: 100px;
+.login-box > .login-inner > .login-middle > .ID-box {
+  width: 400px;
+  height: 50%;
+  /* background-color: bisque; */
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  font-size: 15px;
 }
-.bodyInner
-  > .mainBox
-  > .Login-Box
-  > .Login-Box-inner
-  > .form
-  > .ID-Box
-  > .ID-input {
-  width: 220px;
-  height: 25px;
-  backdrop-filter: blur(5px);
-  background-color: rgba(255, 255, 192, 0.1);
-  box-shadow: 2px 7px 15px 8px rgba(0, 0, 0, 0.5);
-  border: none;
+.login-box > .login-inner > .login-middle > .ID-box > p {
+  margin-left: 50px;
+}
+.login-box > .login-inner > .login-middle > .ID-box > input {
+  width: 300px;
+  margin-left: 50px;
+  border-style: none;
+  border-bottom: 2px solid gray;
+}
+.login-box > .login-inner > .login-middle > .PASSWORD-box {
+  width: 400px;
+  height: 50%;
+  /* background-color: bisque; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  font-size: 15px;
+}
+.login-box > .login-inner > .login-middle > .PASSWORD-box > input {
+  width: 300px;
+  margin-left: 50px;
+  border-style: none;
+  border-bottom: 2px solid gray;
+}
+.login-box > .login-inner > .login-middle > .PASSWORD-box > p {
+  margin-left: 50px;
+}
+input {
+  /* width: 200px; */
+  height: 30px;
+  margin-right: 20px;
+}
+input:focus {
   outline: none;
 }
-.bodyInner > .mainBox > .Login-Box > .Login-Box-inner > .form > .Password-Box {
-  font-size: 24px;
-  height: 100px;
+.login-box > .login-inner > .login-button {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 200px;
+  /* background-color: burlywood; */
 }
-.bodyInner
-  > .mainBox
-  > .Login-Box
-  > .Login-Box-inner
-  > .form
-  > .Password-Box
-  > .password-input {
-  width: 220px;
-  height: 25px;
-  backdrop-filter: blur(5px);
-  background-color: rgba(255, 255, 192, 0.1);
-  box-shadow: 2px 7px 15px 8px rgba(0, 0, 0, 0.5);
-  border: none;
-  outline: none;
-}
-.put.action {
-  opacity: 1;
-  color: pink;
-  font-family: "Tilt Neon", cursive;
-  transition: 2s;
-  font-size: 90px;
-}
-.safety.action {
-  opacity: 1;
-  color: chocolate;
-  font-family: "Tilt Neon", cursive;
-  transition: 2s;
-  font-size: 90px;
-}
-.first.action {
-  opacity: 1;
-  color: gold;
-  font-family: "Tilt Neon", cursive;
-  transition: 2s;
-  font-size: 90px;
-}
-.login-btn {
-  width: 120px;
+.login-box > .login-inner > .login-button > button {
+  width: 300px;
   height: 50px;
-  background-color: rgba(255, 255, 192, 0.1);
-  box-shadow: 2px 7px 15px 8px rgba(0, 0, 0, 0.5);
-  border: none;
-  outline: none;
+  font-size: 20px;
+  color: white;
+  background-color: rgb(75, 12, 12);
+  border-style: none;
+  font-weight: bold;
+}
+footer {
+  width: 100%;
+  height: 200px;
 }

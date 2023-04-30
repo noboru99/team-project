@@ -5,21 +5,31 @@ let modalMove = setInterval(rightMove, 10);
 let modalYesBtn = document.getElementById("Yes-btn");
 let modalNoBtn = document.getElementById("No-btn");
 // --------------------------------------
-let safetyBox = document.querySelector(".safety");
-let safetyYesBtn = document.getElementById("safety-yes-Btn");
-let safetyNoBtn = document.querySelector("safety-no-Btn");
-console.log(modalYesBtn);
+const safetyBox = document.querySelector(".safety");
+const safetyYesBtn = document.querySelector(".safety-yes-Btn");
+const safetyNoBtn = document.querySelector(".safety-no-Btn");
+
+const checkbox = document.getElementById("Checkbox");
+const nowBtn = document.querySelector(".now-btn");
+nowBtn.addEventListener("click", () => {
+  modalBack.style.display = "block";
+  safetyBox.style.display = "block";
+});
 function rightMove() {
-  if (modalRight >= 3) {
+  if (modalRight >= -10) {
     clearInterval(modalMove);
   } else {
     modalRight += 1;
     modalBox.style.right = modalRight + "%";
   }
 }
+console.log(checkbox);
 
 modalNoBtn.addEventListener("click", modalClear);
 function modalClear() {
+  if (checkbox.checked) {
+    return modalNoBtn.addEventListener("click", hideDivForDay);
+  }
   modalBack.style.display = "none";
   modalBox.style.display = "none";
 }
@@ -29,12 +39,12 @@ function showSafety() {
   modalBox.style.display = "none";
 }
 let safetyForm = document.getElementById("safety-form");
-// safetyForm.addEventListener("submit", function (event) {
-//   event.preventDefault(); // 기본 제출 동작을 취소합니다.
 
-//   // 폼 제출을 처리하는 코드를 작성합니다.
-
-// });
+safetyYesBtn.addEventListener("click", () => {
+  alert("登録完了");
+  safetyBox.style.display = "none";
+  modalBack.style.display = "none";
+});
 
 safetyNoBtn.addEventListener("click", safetyBoxClear);
 function safetyBoxClear() {
@@ -43,3 +53,35 @@ function safetyBoxClear() {
   safetyBox.style.display = "none";
   modalBack.style.display = "none";
 }
+
+// 하루동안 보이지 않게하는 코드
+
+// modalNoBtn.addEventListener("click", hideDivForDay);
+function hideDivForDay() {
+  // 보이는 div 요소를 보이지 않게 합니다.
+  modalBox.style.display = "none";
+  modalBack.style.display = "none";
+  // localStorage에 값을 설정합니다.
+  sessionStorage.setItem("visibleDivHidden", "true");
+  sessionStorage.setItem("visibleDivHiddenDate", new Date().toISOString());
+}
+
+function checkSessionStorage() {
+  let visibleDivHidden = sessionStorage.getItem("visibleDivHidden");
+  if (visibleDivHidden == "true") {
+    let visibleDivHiddenDate = new Date(
+      sessionStorage.getItem("visibleDivHiddenDate")
+    );
+    let now = new Date();
+
+    // 보이지 않는 시간이 지나지 않았으면 div 요소를 보이지 않게 합니다.
+    if (now - visibleDivHiddenDate < 10000) {
+      modalBox.style.display = "none";
+      modalBack.style.display = "none";
+    }
+  }
+}
+
+window.onload = function () {
+  checkSessionStorage();
+};

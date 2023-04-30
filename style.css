@@ -7,7 +7,7 @@ body {
 }
 .inner {
   margin: 0 auto;
-  width: 80%;
+  width: 1200px;
   /* background-color: beige; */
   /* background-color: azure; */
 }
@@ -16,24 +16,35 @@ header {
 }
 header > .inner > .box {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  height: 130px;
+  height: 100px;
+}
+header > .inner > .box > .logo {
+  height: 100px;
+  font-size: 60px;
+  font-family: "BIZ UDPGothic", sans-serif;
+  font-family: "Tilt Neon", cursive;
 }
 header > .inner > .box > .log-out {
   width: 400px;
+  height: 100px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 header > .inner > .box > .log-out > div > button {
-  width: 300px;
-  height: 100px;
-  border: 8px double #0090bb;
-  background-color: aqua;
-  color: #0090bb;
-  border-radius: 40px;
-  font-weight: bolder;
-  font-size: large;
+  width: 170px;
+  height: 50px;
+  background-color: white;
+  font-size: 20px;
+  border: 3px solid #3c447d;
+  border-radius: 45px;
+  font-weight: bold;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+}
+header > .inner > .box > .log-out > .logout-text {
+  font-family: "Kosugi Maru", sans-serif;
 }
 nav {
   font-size: 10px;
@@ -61,6 +72,7 @@ section > .inner > .box > .left-box {
   height: 300px;
   background-color: white;
   border: 10px solid #fc80ac;
+  box-sizing: border-box;
   margin-right: 20px;
   /* padding: 20px; */
 }
@@ -94,7 +106,7 @@ section > .inner > .box > .left-box > .news > ul > li {
   display: flex;
   align-items: center;
   width: 650px;
-  height: 62px;
+  height: 30px;
   list-style: none;
 }
 section > .inner > .box > .left-box > .news > ul > li > .title {
@@ -131,7 +143,8 @@ section > .inner > .box > .right-box {
   font-size: 10px;
   margin-left: 20px;
   text-align: center;
-  border: 5px solid skyblue;
+  border: 10px solid #2a4383;
+  box-sizing: border-box;
 }
 section > .inner > .box > .right-box > .box-middle > div {
   margin: 10px;
@@ -164,6 +177,7 @@ section > .inner > .box > .right-box > .box-middle > div {
   height: 150px;
   position: relative;
   text-align: center;
+  margin-left: 25px;
 }
 .section-middle > .inner > .box > .middle-left > .img-left > p {
   width: 100px;
@@ -179,12 +193,14 @@ section > .inner > .box > .right-box > .box-middle > div {
   height: 150px;
   position: relative;
   text-align: center;
+  margin-right: 25px;
 }
 .section-middle > .inner > .box > .middle-left > .img-right > p {
   width: 100px;
   position: absolute;
   font-size: 14px;
   font-weight: bold;
+  color: black;
 }
 
 .section-middle > .inner > .box > .middle-right {
@@ -201,12 +217,16 @@ section > .inner > .box > .right-box > .box-middle > div {
   /* border-spacing: 0; */
   /* background-color: #dadada; */
   /* border-collapse: separate; */
-  border-spacing: 10px;
   font-size: 20px;
+  border-spacing: 10px;
   border-collapse: collapse;
   max-height: 200px;
   height: auto;
   overflow-y: scroll;
+  /* text-align: center; */
+}
+.section-middle > .inner > .box > .middle-right > table > thead {
+  width: 720px;
 }
 .section-middle > .inner > .box > .middle-right > table > thead > tr {
   border-bottom: 2px solid black;
@@ -215,6 +235,11 @@ section > .inner > .box > .right-box > .box-middle > div {
   border-left: 1px solid black;
   border-right: 1px solid black;
 } */
+.section-middle > .inner > .box > .middle-right > table > tbody > tr {
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-size: 19px;
+  font-weight: bold;
+}
 tr:nth-child(even) {
   background-color: white;
 }
@@ -278,12 +303,6 @@ tr:nth-child(even) {
   font-weight: bold;
 }
 
-footer {
-  width: 100%;
-  height: 400px;
-  background-color: #dadada;
-}
-
 /* ----------------modal------------------- */
 .modal-back {
   width: 100%;
@@ -291,10 +310,11 @@ footer {
   position: fixed;
   background-color: rgb(0, 0, 0, 0.6);
   z-index: 999;
+  display: block;
 }
 .modal-box {
-  position: absolute;
-  top: 50%;
+  position: fixed;
+  top: 30%;
   /* right: -100%; */
   transform: translate(-50%, -50%);
   width: 300px;
@@ -302,7 +322,6 @@ footer {
   background-color: whitesmoke;
   z-index: 1000;
   border-radius: 20px;
-  position: absolute;
   transition: left 1s;
   /* display: none; */
 }
@@ -380,7 +399,7 @@ footer {
 }
 
 .safety {
-  position: absolute;
+  position: fixed;
   /* position: fixed; */
   top: 50%;
   left: 50%;
@@ -390,7 +409,7 @@ footer {
   background-color: whitesmoke;
   z-index: 1000;
   border: 3px solid blue;
-  position: absolute;
+  /* position: absolute; */
   display: none;
 }
 
@@ -405,16 +424,17 @@ footer {
   height: 100px;
   background-color: #264db5;
   color: white;
-  font-size: 18px;
-  font-weight: bolder;
+  font-size: 32px;
+  font-weight: bold;
   text-align: center;
   vertical-align: middle;
-  line-height: 5;
+  line-height: 3;
 }
 
 .safety > form > .safety-box > .safety-middle {
   height: 225px;
   text-align: center;
+  line-height: 1;
 }
 .safety > form > .safety-box > .safety-middle > p {
   font-size: 25px;
@@ -463,11 +483,26 @@ footer {
   justify-content: center;
   align-items: center;
 }
-.safety > form > .safety-box > .safety-button > .safety-no > button {
+.safety > form > .safety-box > .safety-button > .safety-no > .safety-no-Btn {
   width: 100%;
   height: 100%;
   background-color: #264db5;
   color: white;
   font-size: 25px;
   border-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px solid;
+}
+footer {
+  width: 100%;
+  height: 80px;
+  padding: 20px 0 30px;
+  font-size: 10px;
+  line-height: 15px;
+  text-align: center;
+  background-color: #dadada;
+  /* color: #999; */
+  color: #6a6a6a;
 }
