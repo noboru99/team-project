@@ -7,7 +7,7 @@ body {
 }
 .inner {
   margin: 0 auto;
-  width: 80%;
+  width: 1200px;
   /* background-color: beige; */
   /* background-color: azure; */
 }
@@ -16,9 +16,35 @@ header {
 }
 header > .inner > .box {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  height: 80px;
+  height: 100px;
+}
+header > .inner > .box > .logo {
+  height: 100px;
+  font-size: 60px;
+  font-family: "BIZ UDPGothic", sans-serif;
+  font-family: "Tilt Neon", cursive;
+}
+header > .inner > .box > .log-out {
+  width: 400px;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header > .inner > .box > .log-out > div > button {
+  width: 170px;
+  height: 50px;
+  background-color: white;
+  font-size: 20px;
+  border: 3px solid #3c447d;
+  border-radius: 45px;
+  font-weight: bold;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+}
+header > .inner > .box > .log-out > .logout-text {
+  font-family: "Kosugi Maru", sans-serif;
 }
 /* -----------------------------------------header--------------------- */
 
@@ -28,7 +54,7 @@ header > .inner > .box {
   /* background-color: antiquewhite; */
   display: flex;
   justify-content: center;
-  background-color: aqua;
+  /* background-color: aqua; */
 }
 .title > .title-inner {
   width: 1200px;
@@ -40,6 +66,7 @@ header > .inner > .box {
 .title > .title-inner > p {
   font-size: 60px;
   font-family: "BIZ UDPGothic", sans-serif;
+  font-family: "Kiwi Maru", serif;
   font-family: "Tilt Neon", cursive;
 }
 section {
@@ -106,10 +133,19 @@ section > .section-inner > .table-box > .left-table {
 section > .section-inner > .table-box > .left-table > table {
   text-align: center;
   width: 150px;
-  height: 400px;
+  /* height: 100%; */
   border: 1px solid black;
   /* position: fixed;
   top: 240px; */
+  border-collapse: collapse;
+}
+section > .section-inner > .table-box > .left-table > table > thead > tr > th {
+  border-bottom: 3px solid #3c447d;
+  height: 60px;
+}
+section > .section-inner > .table-box > .left-table > table > tbody > tr {
+  border-bottom: 1px solid black;
+  height: 40px;
 }
 section > .section-inner > .table-box > .middle-table {
   width: 1000px;
@@ -126,7 +162,7 @@ section > .section-inner > .table-box > .middle-table > table {
 section > .section-inner > .table-box > .middle-table > table > thead {
   width: 1000px;
   height: 100px;
-  background-color: aliceblue;
+  /* background-color: aliceblue; */
 }
 section
   > .section-inner
@@ -136,7 +172,7 @@ section
   > thead
   > tr
   > th {
-  border-bottom: 3px solid black;
+  border-bottom: 5px solid #3c447d;
   font-size: 30px;
 }
 section > .section-inner > .table-box > .middle-table > table > tbody > tr {

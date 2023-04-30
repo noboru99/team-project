@@ -33,7 +33,7 @@ header > .inner > .box > .log-out {
   justify-content: space-between;
   align-items: center;
 }
-header > .inner > .box > .log-out > div > button {
+header > .inner > .box > .log-out > div > .now-btn {
   width: 170px;
   height: 50px;
   background-color: white;
@@ -44,6 +44,8 @@ header > .inner > .box > .log-out > div > button {
   font-family: "M PLUS Rounded 1c", sans-serif;
 }
 header > .inner > .box > .log-out > .logout-text {
+  border-style: none;
+  background-color: white;
   font-family: "Kosugi Maru", sans-serif;
 }
 nav {

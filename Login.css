@@ -1,10 +1,11 @@
 body {
   margin: 0;
   padding: 0;
+  height: 100vh;
 }
 .main-box {
   width: 100%;
-  height: 800px;
+  height: 100vh;
   display: flex;
   justify-content: center;
   /* background-color: #2a4383; */
@@ -18,7 +19,7 @@ body {
   justify-content: center;
 }
 .main-box > .inner > .textbox {
-  margin-top: 200px;
+  margin-top: 163px;
   width: 700px;
   height: 500px;
   display: flex;
@@ -28,20 +29,34 @@ body {
 }
 .main-box > .inner > .textbox > .text-inner {
   width: 700px;
-  height: 800px;
+  height: 600px;
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
 .main-box > .inner > .textbox > .text-inner > .welcomText {
   width: 700px;
-  height: 100px;
+  height: 70px;
   /* background-color: blue; */
-  font-size: 40px;
+  font-size: 50px;
   font-family: "BIZ UDPGothic", sans-serif;
   font-family: "Tilt Neon", cursive;
   font-weight: bold;
   color: white;
+}
+.main-box > .inner > .textbox > .text-inner > .name-text {
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: blue;
+  font-family: "BIZ UDPGothic", sans-serif;
+  font-family: "Tilt Neon", cursive;
+}
+.main-box > .inner > .textbox > .text-inner > .name-text p {
+  font-size: 18px;
+  margin-top: 0;
 }
 .main-box > .inner > .textbox > .text-inner > .main-text {
   width: 700px;
@@ -73,7 +88,7 @@ body {
   height: 500px;
   display: flex;
   justify-content: center;
-  margin-top: 200px;
+  margin-top: 130px;
 }
 .login-box > .login-inner {
   width: 400px;
@@ -94,17 +109,21 @@ body {
   color: #3c447d;
   text-align: center;
   margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .login-box > .login-inner > .hidden-box {
   width: 400px;
-  height: 50px;
+  height: 40px;
   background-color: whitesmoke;
   visibility: hidden;
 }
 .login-box > .login-inner > .login-middle {
   width: 400px;
-  height: 300px;
+  height: 250px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -157,7 +176,7 @@ input:focus {
   justify-content: center;
   align-items: center;
   width: 400px;
-  height: 200px;
+  height: 150px;
   /* background-color: burlywood; */
 }
 .login-box > .login-inner > .login-button > button {
@@ -165,9 +184,10 @@ input:focus {
   height: 50px;
   font-size: 20px;
   color: white;
-  background-color: rgb(75, 12, 12);
+  background-color: rgb(39, 39, 39);
   border-style: none;
   font-weight: bold;
+  border-radius: 5px;
 }
 footer {
   width: 100%;

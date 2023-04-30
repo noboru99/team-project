@@ -8,10 +8,25 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@700&family=Tilt+Neon&display=swap"
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@800&display=swap"
       rel="stylesheet"
     />
-    <!-- title-font -->
+    <!-- 지금등록 글씨 -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap"
+      rel="stylesheet"
+    />
+    <!-- 로그아웃글씨 -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-------------- ↓↓↓↓안부표 글씨 ↓↓↓↓-------------->
+    <link
+      href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@700&family=Kiwi+Maru:wght@500&family=Tilt+Neon&display=swap"
+      rel="stylesheet"
+    />
     <link href="./safety-chart.css" rel="stylesheet" />
     <title>Document</title>
   </head>
@@ -20,9 +35,38 @@
     <header>
       <div class="inner">
         <div class="box">
-          <div></div>
-          <div class="logo">LOGO</div>
-          <div class="log-out">logout</div>
+          <div>
+            <button
+              style="
+                border: 1px solid #314178;
+                border-radius: 20px;
+                background-color: whitesmoke;
+              "
+            >
+              <a
+                href="#"
+                style="
+                  text-decoration: none;
+                  color: #314178;
+                  font-size: 17px;
+                  font-weight: bold;
+                "
+                >ユーザー登録
+              </a>
+            </button>
+          </div>
+          <div style="width: 300px"></div>
+          <div class="logo">Spring</div>
+          <!-- <div class="header-button"><button>安否登録</button></div> -->
+          <div class="log-out">
+            <div>
+              <button class="now-btn">
+                今すぐ<span style="color: red">安否登録</span>
+              </button>
+            </div>
+            <div class="logout-text">昇さん、ようこそ</div>
+            <div class="logout-text">ログアウト</div>
+          </div>
         </div>
       </div>
     </header>
