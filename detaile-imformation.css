@@ -3,7 +3,7 @@ body {
   padding: 0;
   width: 100%;
   height: 100%;
-  /* background-color: aqua; */
+  background-color: rgb(219, 233, 245);
 }
 .inner {
   margin: 0 auto;
@@ -12,7 +12,8 @@ body {
   /* background-color: azure; */
 }
 header {
-  border-bottom: 1px solid #c6d6e3;
+  border-bottom: 1px solid rgb(219, 233, 245);
+  background-color: white;
 }
 header > .inner > .box {
   display: flex;
@@ -48,17 +49,9 @@ header > .inner > .box > .log-out > .logout-text {
   background-color: white;
   font-family: "Kosugi Maru", sans-serif;
 }
-
-.menu {
-  line-height: 100px;
-  float: right;
-  margin-left: 30px;
-  list-style: none;
-}
-.menuitem {
-  list-style: none;
-  display: inline-block;
-  margin: 0 20px;
+main {
+  margin: 0 auto;
+  width: 100%;
 }
 a {
   text-decoration: none;
@@ -68,7 +61,7 @@ a {
 table {
   width: 90%;
   border-collapse: collapse;
-  border: 5px solid #4761a1;
+  border: 5px solid #2a4383;
   margin-left: 5%;
   margin-right: 5%;
   margin-top: 50px;
@@ -76,7 +69,7 @@ table {
 }
 
 table tr {
-  border-bottom: solid 2px #4761a1;
+  border-bottom: solid 2px #2a4383;
 }
 
 table tr:last-child {
@@ -87,8 +80,8 @@ table th {
   position: relative;
   text-align: left;
   width: 30%;
-  background-color: #4761a1;
-  color: white;
+  background-color: white;
+  color: black;
   text-align: center;
   padding: 10px 0;
 }
@@ -101,7 +94,7 @@ table th:after {
   position: absolute;
   top: calc(50% - 10px);
   right: -10px;
-  border-left: 10px solid #4761a1;
+  border-left: 10px solid #2a4383;
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
 }
@@ -110,11 +103,119 @@ table td {
   text-align: left;
   width: 70%;
   text-align: center;
-  background-color: #eaf6ff;
+  background-color: white;
   padding: 10px 0;
 }
 footer {
   width: 100%;
   height: 150px;
   background-color: #2a4383;
+}
+
+/* --------------------지금바로 등록하기 버튼-------------------- */
+
+.safety {
+  position: fixed;
+  /* position: fixed; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 600px;
+  background-color: whitesmoke;
+  z-index: 1000;
+  border: 3px solid blue;
+  /* position: absolute; */
+  display: none;
+}
+
+.safety > form > .safety-box {
+  width: 500px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.safety > form > .safety-box > .safety-header {
+  height: 100px;
+  background-color: #264db5;
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 3;
+}
+
+.safety > form > .safety-box > .safety-middle {
+  height: 225px;
+  text-align: center;
+  line-height: 1;
+}
+.safety > form > .safety-box > .safety-middle > p {
+  font-size: 25px;
+  font-weight: bolder;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.safety > form > .safety-box > .safety-bottom {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 40px;
+}
+.safety > form > .safety-box > .safety-bottom > p {
+  font-size: 15px;
+  font-weight: bolder;
+}
+.safety > form > .safety-box > .safety-button {
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+}
+.safety > form > .safety-box > .safety-button > .safety-yes {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.safety > form > .safety-box > .safety-button > .safety-yes > button {
+  width: 100%;
+  height: 100%;
+  border-style: none;
+  background-color: #264db5;
+  color: white;
+  font-size: 25px;
+}
+.safety > form > .safety-box > .safety-button > .safety-no {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.safety > form > .safety-box > .safety-button > .safety-no > .safety-no-Btn {
+  width: 100%;
+  height: 100%;
+  background-color: #264db5;
+  color: white;
+  font-size: 25px;
+  border-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px solid;
+}
+.modal-back {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgb(0, 0, 0, 0.6);
+  z-index: 999;
+  display: none;
 }

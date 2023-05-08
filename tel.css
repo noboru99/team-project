@@ -1,0 +1,323 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  /* height: 100%; */
+  overflow-x: hidden;
+}
+.inner {
+  margin: 0 auto;
+  width: 1200px;
+}
+header {
+  border-bottom: 1px solid #c6d6e3;
+}
+header > .inner > .box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+}
+header > .inner > .box > .logo {
+  height: 100px;
+  font-size: 60px;
+  font-family: "BIZ UDPGothic", sans-serif;
+  font-family: "Tilt Neon", cursive;
+}
+header > .inner > .box > .log-out {
+  width: 400px;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header > .inner > .box > .log-out > div > .now-btn {
+  width: 170px;
+  height: 50px;
+  background-color: white;
+  font-size: 20px;
+  border: 3px solid #3c447d;
+  border-radius: 45px;
+  font-weight: bold;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+}
+header > .inner > .box > .log-out > .logout-text {
+  border-style: none;
+  background-color: white;
+  font-family: "Kosugi Maru", sans-serif;
+}
+.inner > .depart-num {
+  width: 1200px;
+  height: 1200px;
+  background-color: #c6d6e3;
+}
+
+/* ----------------header---------------- */
+.top-box {
+  width: 100%;
+  height: 80px;
+  margin: auto 0;
+  display: flex;
+  justify-content: center;
+  line-height: 80px;
+}
+.top-box > .top-inner {
+  width: 1200px;
+  height: 80px;
+  text-align: center;
+  font-size: 35px;
+  color: #111111;
+  font-family: "NanumSquareR", "Dotum", Arial, Sans-serif;
+  font-weight: bold;
+  padding-right: 100px;
+  /* background-color: #013e68; */
+}
+
+.main-box {
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.main-box > nav {
+  margin-top: 30px;
+  /* width: 400px;*/
+  /* height: 600px; */
+  /* background-color: #111111; */
+}
+.main-box > nav > .navinner {
+  width: 300px;
+  height: 600px;
+  border: 2px solid #236dc7;
+  border-radius: 20px;
+  position: absolute;
+}
+.main-box > nav > .navinner > .img {
+  width: 234px;
+  height: 100px;
+  background-image: url("https://www.sejong.go.kr/template/A/images/lnb_irA.png");
+  position: relative;
+  top: -110px;
+  left: 35px;
+}
+.main-box > nav > .navinner > .nav-name {
+  position: relative;
+  width: 200px;
+  height: 60px;
+  background-color: #0059b5;
+  display: table;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 3px 3px #e1e1e1;
+  text-align: center;
+  line-height: 60px;
+  top: -110px;
+  left: 53px;
+  color: white;
+  font-size: 20px;
+}
+.main-box > nav > .navinner > .nav-name::after {
+  position: absolute;
+  top: -1px;
+  right: -11px;
+  content: "";
+  border-right: 10px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-top: 7px solid #002560;
+  transform: rotate(-90deg);
+}
+.main-box > nav > .navinner > .list {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: -100px;
+}
+.main-box > nav > .navinner > .list > p {
+  width: 300px;
+  height: 80px;
+  background-color: white;
+  color: #0059b5;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 3;
+  margin: 0;
+  padding: 0;
+}
+.main-box > nav > .navinner > .list > p:hover {
+  background-color: #0059b5;
+  color: white;
+}
+.main-box > .main-inner {
+  width: 1200px;
+  height: 1400px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.main-box > .main-inner > .each-box {
+  margin-top: 30px;
+  width: 800px;
+  height: 200px;
+  background-color: #f5f5f5;
+  display: flex;
+  border: 1px solid #dddddd;
+  /* box-shadow: 0px 1.7px 2.2px rgba(0, 0, 0, 0.02),
+    0px 4px 5.3px rgba(0, 0, 0, 0.028), 0px 7.5px 10px rgba(0, 0, 0, 0.035),
+    0px 13.4px 17.9px rgba(0, 0, 0, 0.042),
+    0px 25.1px 33.4px rgba(0, 0, 0, 0.05), 0px 60px 80px rgba(0, 0, 0, 0.07); */
+}
+.main-box > .main-inner > .each-box > .title-box {
+  width: 200px;
+  height: 200px;
+  color: #013e68;
+  font-size: 30px;
+  font-family: "Kosugi", sans-serif;
+  /* font-weight: bold; */
+  display: flex;
+  /* justify-content: center; */
+  padding-top: 30px;
+  padding-left: 30px;
+}
+.main-box > .main-inner > .each-box > .detail-box {
+  width: 600px;
+  height: 200px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "Kosugi", sans-serif;
+}
+.main-box > .main-inner > .each-box > .detail-box > .tell-name > .name {
+  font-size: 28px;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 14px;
+}
+.main-box > .main-inner > .each-box > .detail-box > .tell-name > .tell {
+  color: #666;
+  font-size: 16px;
+}
+.main-box > .main-inner > .each-box > .detail-box > .tell-name > .fax {
+  color: #666;
+  font-size: 16px;
+}
+footer {
+  width: 100%;
+  height: 80px;
+  padding: 20px 0 30px;
+  font-size: 10px;
+  line-height: 15px;
+  text-align: center;
+  background-color: #dadada;
+  /* color: #999; */
+  color: #6a6a6a;
+}
+
+/* --------------------지금바로 등록하기 버튼-------------------- */
+
+.safety {
+  position: fixed;
+  /* position: fixed; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 600px;
+  background-color: whitesmoke;
+  z-index: 1000;
+  border: 3px solid blue;
+  /* position: absolute; */
+  display: none;
+}
+
+.safety > form > .safety-box {
+  width: 500px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.safety > form > .safety-box > .safety-header {
+  height: 100px;
+  background-color: #264db5;
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 3;
+}
+
+.safety > form > .safety-box > .safety-middle {
+  height: 225px;
+  text-align: center;
+  line-height: 1;
+}
+.safety > form > .safety-box > .safety-middle > p {
+  font-size: 25px;
+  font-weight: bolder;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.safety > form > .safety-box > .safety-bottom {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 40px;
+}
+.safety > form > .safety-box > .safety-bottom > p {
+  font-size: 15px;
+  font-weight: bolder;
+}
+.safety > form > .safety-box > .safety-button {
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+}
+.safety > form > .safety-box > .safety-button > .safety-yes {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.safety > form > .safety-box > .safety-button > .safety-yes > button {
+  width: 100%;
+  height: 100%;
+  border-style: none;
+  background-color: #264db5;
+  color: white;
+  font-size: 25px;
+}
+.safety > form > .safety-box > .safety-button > .safety-no {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.safety > form > .safety-box > .safety-button > .safety-no > .safety-no-Btn {
+  width: 100%;
+  height: 100%;
+  background-color: #264db5;
+  color: white;
+  font-size: 25px;
+  border-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px solid;
+}
+.modal-back {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgb(0, 0, 0, 0.6);
+  z-index: 999;
+  display: none;
+}

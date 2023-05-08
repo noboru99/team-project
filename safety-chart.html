@@ -33,6 +33,102 @@
   </head>
 
   <body>
+    <div class="safety">
+      <form method="post" th:action="@{/safetyForm}">
+        <div class="safety-box">
+          <input
+            type="hidden"
+            name="employeeId"
+            th:value="${sessionId}"
+          /><!-- hidden -->
+          <div class="safety-header">安否登録フォーム</div>
+          <div class="safety-middle">
+            <p><label>今のあなたの安全ですか？</label></p>
+            <input
+              type="radio"
+              id="safety"
+              name="saOrDa"
+              value="o"
+              th:checked="${true}"
+            />
+            <label for="safety">安全だ</label>
+            <input
+              type="radio"
+              id="dangerous"
+              name="saOrDa"
+              value="x"
+              th:checked="${false}"
+            />
+            <label for="dangerous">危険だ</label>
+            <br /><br />
+
+            <p><label>ケガしてますか？</label></p>
+            <input
+              type="radio"
+              id="injuredNo"
+              name="injured"
+              value="false"
+              th:checked="${true}"
+            />
+            <label for="injuredNo">してない</label>
+
+            <input
+              type="radio"
+              id="injuredYes"
+              name="injured"
+              value="true"
+              th:checked="${false}"
+            />
+            <label for="injuredYes">してる</label>
+            <br /><br />
+
+            <p><label>出勤可能ですか？</label></p>
+            <input
+              type="radio"
+              id="workingOK"
+              name="working"
+              value="true"
+              th:checked="${true}"
+            />
+            <label for="workingOK">可能</label>
+            <input
+              type="radio"
+              id="workingNO"
+              name="working"
+              value="false"
+              th:checked="${false}"
+            />
+            <label for="workingNO">不可能</label>
+            <br /><br />
+          </div>
+          <div class="safety-bottom">
+            <p>伝えたいことがあれば書いてください</p>
+            <textarea
+              type="text"
+              id="content"
+              name="otherInfo"
+              style="
+                width: 410px;
+                height: 125px;
+                font-size: 17px;
+                border: 1px solid;
+              "
+              rows="5"
+              cols="50"
+            ></textarea>
+          </div>
+          <div class="safety-button">
+            <div class="safety-yes">
+              <button type="submit" class="safety-yes-Btn">はい</button>
+            </div>
+            <div class="safety-no">
+              <div class="safety-no-Btn">いいえ</div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="modal-back"></div>
     <header>
       <div class="inner">
         <div class="box">
@@ -393,6 +489,76 @@
                   <td>○</td>
                   <td>2020-02-20</td>
                 </tr>
+                <tr>
+                  <td>
+                    <a href="#" style="text-decoration: none; color: black"
+                      >営業部</a
+                    >
+                  </td>
+                  <td>
+                    <a href="#" style="text-decoration: none; color: black"
+                      >片山 美結</a
+                    >
+                  </td>
+                  <td>○</td>
+                  <td>2020-02-20</td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="#" style="text-decoration: none; color: black"
+                      >営業部</a
+                    >
+                  </td>
+                  <td>
+                    <a href="#" style="text-decoration: none; color: black"
+                      >片山 美結</a
+                    >
+                  </td>
+                  <td>○</td>
+                  <td>2020-02-20</td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="#" style="text-decoration: none; color: black"
+                      >営業部</a
+                    >
+                  </td>
+                  <td>
+                    <a href="#" style="text-decoration: none; color: black"
+                      >片山 美結</a
+                    >
+                  </td>
+                  <td>○</td>
+                  <td>2020-02-20</td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="#" style="text-decoration: none; color: black"
+                      >営業部</a
+                    >
+                  </td>
+                  <td>
+                    <a href="#" style="text-decoration: none; color: black"
+                      >片山 美結</a
+                    >
+                  </td>
+                  <td>○</td>
+                  <td>2020-02-20</td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="#" style="text-decoration: none; color: black"
+                      >営業部</a
+                    >
+                  </td>
+                  <td>
+                    <a href="#" style="text-decoration: none; color: black"
+                      >片山 美結</a
+                    >
+                  </td>
+                  <td>○</td>
+                  <td>2020-02-20</td>
+                </tr>
               </tbody>
             </table>
           </div>
@@ -450,5 +616,6 @@
       </p>
       <em>© KURLY CORP. ALL RIGHTS RESERVED</em>
     </footer>
+    <script src="safety-chart.js"></script>
   </body>
 </html>

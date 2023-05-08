@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap"
+      rel="stylesheet"
+    />
+    <!-- 上は재난최근정보글꼴 -->
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- 지금등록 글씨 -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap"
+      rel="stylesheet"
+    />
+    <!-- 로그아웃글씨 -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kosugi&display=swap"
+      rel="stylesheet"
+    />
+    <!-- 메인화면 글씨 -->
+    <link rel="stylesheet" href="tel.css" />
+  </head>
+  <body>
+    <div class="safety">
+      <form method="post" th:action="@{/safetyForm}">
+        <div class="safety-box">
+          <input
+            type="hidden"
+            name="employeeId"
+            th:value="${sessionId}"
+          /><!-- hidden -->
+          <div class="safety-header">安否登録フォーム</div>
+          <div class="safety-middle">
+            <p><label>今のあなたの安全ですか？</label></p>
+            <input
+              type="radio"
+              id="safety"
+              name="saOrDa"
+              value="o"
+              th:checked="${true}"
+            />
+            <label for="safety">安全だ</label>
+            <input
+              type="radio"
+              id="dangerous"
+              name="saOrDa"
+              value="x"
+              th:checked="${false}"
+            />
+            <label for="dangerous">危険だ</label>
+            <br /><br />
+
+            <p><label>ケガしてますか？</label></p>
+            <input
+              type="radio"
+              id="injuredNo"
+              name="injured"
+              value="false"
+              th:checked="${true}"
+            />
+            <label for="injuredNo">してない</label>
+
+            <input
+              type="radio"
+              id="injuredYes"
+              name="injured"
+              value="true"
+              th:checked="${false}"
+            />
+            <label for="injuredYes">してる</label>
+            <br /><br />
+
+            <p><label>出勤可能ですか？</label></p>
+            <input
+              type="radio"
+              id="workingOK"
+              name="working"
+              value="true"
+              th:checked="${true}"
+            />
+            <label for="workingOK">可能</label>
+            <input
+              type="radio"
+              id="workingNO"
+              name="working"
+              value="false"
+              th:checked="${false}"
+            />
+            <label for="workingNO">不可能</label>
+            <br /><br />
+          </div>
+          <div class="safety-bottom">
+            <p>伝えたいことがあれば書いてください</p>
+            <textarea
+              type="text"
+              id="content"
+              name="otherInfo"
+              style="
+                width: 410px;
+                height: 125px;
+                font-size: 17px;
+                border: 1px solid;
+              "
+              rows="5"
+              cols="50"
+            ></textarea>
+          </div>
+          <div class="safety-button">
+            <div class="safety-yes">
+              <button type="submit" class="safety-yes-Btn">はい</button>
+            </div>
+            <div class="safety-no">
+              <div class="safety-no-Btn">いいえ</div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="modal-back"></div>
+    <header>
+      <div class="inner">
+        <div class="box">
+          <div>
+            <button
+              style="
+                border: 1px solid #314178;
+                border-radius: 20px;
+                background-color: whitesmoke;
+              "
+            >
+              <a
+                href="#"
+                style="
+                  text-decoration: none;
+                  color: #314178;
+                  font-size: 17px;
+                  font-weight: bold;
+                "
+                >ユーザー登録
+              </a>
+            </button>
+          </div>
+          <div style="width: 300px"></div>
+          <div class="logo">Spring</div>
+          <div class="log-out">
+            <div>
+              <button class="now-btn">
+                今すぐ<span style="color: red">安否登録</span>
+              </button>
+            </div>
+            <div class="logout-text">昇さん、ようこそ</div>
+            <button class="logout-text">ログアウト</button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-------------- header -------------->
+
+    <div
+      style="
+        width: 100%;
+        height: 50px;
+        background-color: #314178;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      "
+    ></div>
+    <div class="top-box">
+      <div class="top-inner">部署別緊急連絡先</div>
+    </div>
+    <div class="main-box">
+      <nav class="nav-box">
+        <div class="navinner">
+          <div class="img"></div>
+          <div class="nav-name">部署リスト</div>
+          <div class="list">
+            <p>社長室</p>
+            <p>人事部</p>
+            <p>総務部</p>
+            <p>法務部</p>
+            <p>経理部</p>
+            <p>広報部</p>
+          </div>
+        </div>
+      </nav>
+      <div class="main-inner">
+        <div class="each-box">
+          <div class="title-box">代表</div>
+          <div class="detail-box">
+            <div class="tell-name">
+              <p class="name">社長室</p>
+              <div class="tell">
+                <img
+                  src="https://www.spo.go.kr/images/common/ico_tel.png"
+                  style="width: 15px; height: 15px"
+                  alt=""
+                />
+                090-9861-4120
+              </div>
+              <div class="fax">
+                <img
+                  src="https://www.spo.go.kr/images/common/ico_fax.png"
+                  style="width: 15px; height: 15px"
+                  alt=""
+                />
+                051-123-456
+              </div>
+            </div>
+            <div class="tell-name">
+              <p class="name">秘書</p>
+              <div class="tell">
+                <img
+                  src="https://www.spo.go.kr/images/common/ico_tel.png"
+                  style="width: 15px; height: 15px"
+                  alt=""
+                />
+                090-9861-4120
+              </div>
+              <div class="fax">
+                <img
+                  src="https://www.spo.go.kr/images/common/ico_fax.png"
+                  style="width: 15px; height: 15px"
+                  alt=""
+                />
+                051-123-456
+              </div>
+            </div>
+            <div class="tell-name">
+              <p class="name">秘書室</p>
+              <div class="tell">
+                <img
+                  src="https://www.spo.go.kr/images/common/ico_tel.png"
+                  style="width: 15px; height: 15px"
+                  alt=""
+                />
+                090-9861-4120
+              </div>
+              <div class="fax">
+                <img
+                  src="https://www.spo.go.kr/images/common/ico_fax.png"
+                  style="width: 15px; height: 15px"
+                  alt=""
+                />
+                051-123-456
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="each-box">
+          <div class="title-box">人事部</div>
+          <div class="detail-box">
+            <div class="tell-name">
+              <p class="name">部長</p>
+              <div class="tell">
+                <img
+                  src="https://www.spo.go.kr/images/common/ico_tel.png"
+                  style="width: 15px; height: 15px"
+                  alt=""
+                />
+                090-9861-4120
+              </div>
+              <div class="fax">
+                <img
+                  src="https://www.spo.go.kr/images/common/ico_fax.png"
+                  style="width: 15px; height: 15px"
+                  alt=""
+                />
+                051-123-456
+              </div>
+            </div>
+            <div class="tell-name">
+              <p class="name">課長</p>
+              <div class="tell">
+                <img
+                  src="https://www.spo.go.kr/images/common/ico_tel.png"
+                  style="width: 15px; height: 15px"
+                  alt=""
+                />
+                090-9861-4120
+              </div>
+              <div class="fax">
+                <img
+                  src="https://www.spo.go.kr/images/common/ico_fax.png"
+                  style="width: 15px; height: 15px"
+                  alt=""
+                />
+                051-123-456
+              </div>
+            </div>
+            <div class="tell-name">
+              <p class="name">代理人</p>
+              <div class="tell">
+                <img
+                  src="https://www.spo.go.kr/images/common/ico_tel.png"
+                  style="width: 15px; height: 15px"
+                  alt=""
+                />
+                090-9861-4120
+              </div>
+              <div class="fax">
+                <img
+                  src="https://www.spo.go.kr/images/common/ico_fax.png"
+                  style="width: 15px; height: 15px"
+                  alt=""
+                />
+                051-123-456
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="each-box">
+          <div class="title-box">総務部</div>
+          <div class="detail-box">
+            <div class="tell-name">
+              <p class="name">部長</p>
+              <div class="tell">
+                <img
+                  src="https://www.spo.go.kr/images/common/ico_tel.png"
+                  style="width: 15px; height: 15px"
+                  alt=""
+                />
+                090-9861-4120
+              </div>
+              <div class="fax">
+                <img
+                  src="https://www.spo.go.kr/images/common/ico_fax.png"
+                  style="width: 15px; height: 15px"
+                  alt=""
+                />
+                051-123-456
+              </div>
+            </div>
+            <div class="tell-name">
+              <p class="name">課長</p>
+              <div class="tell">
+                <img
+                  src="https://www.spo.go.kr/images/common/ico_tel.png"
+                  style="width: 15px; height: 15px"
+                  alt=""
+                />
+                090-9861-4120
+              </div>
+              <div class="fax">
+                <img
+                  src="https://www.spo.go.kr/images/common/ico_fax.png"
+                  style="width: 15px; height: 15px"
+                  alt=""
+                />
+                051-123-456
+              </div>
+            </div>
+            <div class="tell-name">
+              <p class="name">代理人</p>
+              <div class="tell">
+                <img
+                  src="https://www.spo.go.kr/images/common/ico_tel.png"
+                  style="width: 15px; height: 15px"
+                  alt=""
+                />
+                090-9861-4120
+              </div>
+              <div class="fax">
+                <img
+                  src="https://www.spo.go.kr/images/common/ico_fax.png"
+                  style="width: 15px; height: 15px"
+                  alt=""
+                />
+                051-123-456
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="each-box">
+          <div class="title-box">法務部</div>
+          <div class="detail-box">
+            <div class="tell-name">
+              <p class="name">部長</p>
+              <div class="tell">
+                <img
+                  src="https://www.spo.go.kr/images/common/ico_tel.png"
+                  style="width: 15px; height: 15px"
+                  alt=""
+                />
+                090-9861-4120
+              </div>
+              <div class="fax">
+                <img
+                  src="https://www.spo.go.kr/images/common/ico_fax.png"
+                  style="width: 15px; height: 15px"
+                  alt=""
+                />
+                051-123-456
+              </div>
+            </div>
+            <div class="tell-name">
+              <p class="name">課長</p>
+              <div class="tell">
+                <img
+                  src="https://www.spo.go.kr/images/common/ico_tel.png"
+                  style="width: 15px; height: 15px"
+                  alt=""
+                />
+                090-9861-4120
+              </div>
+              <div class="fax">
+                <img
+                  src="https://www.spo.go.kr/images/common/ico_fax.png"
+                  style="width: 15px; height: 15px"
+                  alt=""
+                />
+                051-123-456
+              </div>
+            </div>
+            <div class="tell-name">
+              <p class="name">代理人</p>
+              <div class="tell">
+                <img
+                  src="https://www.spo.go.kr/images/common/ico_tel.png"
+                  style="width: 15px; height: 15px"
+                  alt=""
+                />
+                090-9861-4120
+              </div>
+              <div class="fax">
+                <img
+                  src="https://www.spo.go.kr/images/common/ico_fax.png"
+                  style="width: 15px; height: 15px"
+                  alt=""
+                />
+                051-123-456
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="each-box">
+          <div class="title-box">経理部</div>
+          <div class="detail-box">
+            <div class="tell-name">
+              <p class="name">部長</p>
+              <div class="tell">
+                <img
+                  src="https://www.spo.go.kr/images/common/ico_tel.png"
+                  style="width: 15px; height: 15px"
+                  alt=""
+                />
+                090-9861-4120
+              </div>
+              <div class="fax">
+                <img
+                  src="https://www.spo.go.kr/images/common/ico_fax.png"
+                  style="width: 15px; height: 15px"
+                  alt=""
+                />
+                051-123-456
+              </div>
+            </div>
+            <div class="tell-name">
+              <p class="name">課長</p>
+              <div class="tell">
+                <img
+                  src="https://www.spo.go.kr/images/common/ico_tel.png"
+                  style="width: 15px; height: 15px"
+                  alt=""
+                />
+                090-9861-4120
+              </div>
+              <div class="fax">
+                <img
+                  src="https://www.spo.go.kr/images/common/ico_fax.png"
+                  style="width: 15px; height: 15px"
+                  alt=""
+                />
+                051-123-456
+              </div>
+            </div>
+            <div class="tell-name">
+              <p class="name">代理人</p>
+              <div class="tell">
+                <img
+                  src="https://www.spo.go.kr/images/common/ico_tel.png"
+                  style="width: 15px; height: 15px"
+                  alt=""
+                />
+                090-9861-4120
+              </div>
+              <div class="fax">
+                <img
+                  src="https://www.spo.go.kr/images/common/ico_fax.png"
+                  style="width: 15px; height: 15px"
+                  alt=""
+                />
+                051-123-456
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="each-box">
+          <div class="title-box">広告チーム</div>
+          <div class="detail-box">
+            <div class="tell-name">
+              <p class="name">部長</p>
+              <div class="tell">
+                <img
+                  src="https://www.spo.go.kr/images/common/ico_tel.png"
+                  style="width: 15px; height: 15px"
+                  alt=""
+                />
+                090-9861-4120
+              </div>
+              <div class="fax">
+                <img
+                  src="https://www.spo.go.kr/images/common/ico_fax.png"
+                  style="width: 15px; height: 15px"
+                  alt=""
+                />
+                051-123-456
+              </div>
+            </div>
+            <div class="tell-name">
+              <p class="name">広告チーム１</p>
+              <div class="tell">
+                <img
+                  src="https://www.spo.go.kr/images/common/ico_tel.png"
+                  style="width: 15px; height: 15px"
+                  alt=""
+                />
+                090-9861-4120
+              </div>
+              <div class="fax">
+                <img
+                  src="https://www.spo.go.kr/images/common/ico_fax.png"
+                  style="width: 15px; height: 15px"
+                  alt=""
+                />
+                051-123-456
+              </div>
+            </div>
+            <div class="tell-name">
+              <p class="name">広告チーム2</p>
+              <div class="tell">
+                <img
+                  src="https://www.spo.go.kr/images/common/ico_tel.png"
+                  style="width: 15px; height: 15px"
+                  alt=""
+                />
+                090-9861-4120
+              </div>
+              <div class="fax">
+                <img
+                  src="https://www.spo.go.kr/images/common/ico_fax.png"
+                  style="width: 15px; height: 15px"
+                  alt=""
+                />
+                051-123-456
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p>
+        このサイトはteamSpringによって作られ、みんなさんの安全対策及び、素早い安否登録を行えるため色んな情報を提供しています。
+        <br />
+      </p>
+      <em>© KURLY CORP. ALL RIGHTS RESERVED</em>
+    </footer>
+    <script src="tel.js"></script>
+  </body>
+</html>

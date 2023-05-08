@@ -72,10 +72,16 @@ section {
   display: flex;
   justify-content: center;
   /* background-color: rgb(182, 221, 255); */
+  height: auto;
+  min-height: 100%;
+  padding-bottom: 80px;
+  /* background-color: #3c447d; */
+  /* background-color: #dbe9f5; */
+  /* background-color: whitesmoke; */
+  /* background-color: #2a4383; */
 }
 section > .section-inner {
   width: 1600px;
-  height: 1000px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -91,7 +97,7 @@ section > .section-inner > .research-box > .research {
   margin-right: 20px;
 } */
 section > .section-inner > .research-box > .research > .select-box {
-  width: 180px;
+  width: 150px;
 }
 section > .section-inner > .research-box > .research > .select-box > select {
   width: 150px;
@@ -116,22 +122,22 @@ section > .section-inner > .research-box > .research > .button-box > button {
 
 section > .section-inner > .table-box {
   width: 1600px;
-  height: 800px;
+  height: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 section > .section-inner > .table-box > .left-table {
   width: 300px;
   height: 400px;
-  /* position: relative; */
+  position: relative;
 }
 section > .section-inner > .table-box > .left-table > table {
   text-align: center;
   width: 215px;
   /* height: 100%; */
-  /* position: fixed;
-  top: 240px; */
+  position: fixed;
+  top: 300px;
   border-collapse: collapse;
   box-shadow: 0px 1.7px 2.2px rgba(0, 0, 0, 0.02),
     0px 4px 5.3px rgba(0, 0, 0, 0.028), 0px 7.5px 10px rgba(0, 0, 0, 0.035),
@@ -196,13 +202,12 @@ section > .section-inner > .table-box > .left-table > table > tbody > tr {
 }
 section > .section-inner > .table-box > .middle-table {
   width: 1000px;
-  height: 800px;
+
   /* overflow-y: scroll; */
 }
 section > .section-inner > .table-box > .middle-table > table {
   text-align: center;
   width: 1000px;
-  height: 800px;
   border-collapse: collapse;
   border-radius: 20px;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
@@ -224,7 +229,8 @@ section
   > th {
   /* border-bottom: 5px solid #3c447d; */
   font-size: 30px;
-  background-color: #2a4383;
+  /* background-color: #2a4383; */
+  background-color: #6495ed;
   color: white;
 }
 section
@@ -262,7 +268,8 @@ section
   > table
   > tbody
   > tr:nth-child(even) {
-  background-color: rgb(225, 225, 225);
+  /* background-color: rgb(225, 225, 225); */
+  background-color: #e6f5ff;
 }
 section
   > .section-inner
@@ -296,7 +303,7 @@ section
 section > .section-inner > .table-box > .right-table {
   width: 300px;
   height: 400px;
-  position: relative;
+  /* position: relative; */
 }
 section > .section-inner > .table-box > .right-table > table {
   text-align: center;
@@ -305,8 +312,8 @@ section > .section-inner > .table-box > .right-table > table {
   /* border: 1px solid black; */
   margin-left: 25px;
   border-collapse: collapse;
-  position: fixed;
-  top: 240px;
+  /* position: fixed; */
+  /* top: 240px; */
   box-shadow: 0px 1.7px 2.2px rgba(0, 0, 0, 0.02),
     0px 4px 5.3px rgba(0, 0, 0, 0.028), 0px 7.5px 10px rgba(0, 0, 0, 0.035),
     0px 13.4px 17.9px rgba(0, 0, 0, 0.042),
@@ -388,4 +395,111 @@ footer {
   background-color: #dadada;
   /* color: #999; */
   color: #6a6a6a;
+  /* background-color: #2a4383; */
+}
+
+.safety {
+  position: fixed;
+  /* position: fixed; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 600px;
+  background-color: whitesmoke;
+  z-index: 1000;
+  border: 3px solid blue;
+  /* position: absolute; */
+  display: none;
+}
+
+.safety > form > .safety-box {
+  width: 500px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.safety > form > .safety-box > .safety-header {
+  height: 100px;
+  background-color: #264db5;
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 3;
+}
+
+.safety > form > .safety-box > .safety-middle {
+  height: 225px;
+  text-align: center;
+  line-height: 1;
+}
+.safety > form > .safety-box > .safety-middle > p {
+  font-size: 25px;
+  font-weight: bolder;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.safety > form > .safety-box > .safety-bottom {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 40px;
+}
+.safety > form > .safety-box > .safety-bottom > p {
+  font-size: 15px;
+  font-weight: bolder;
+}
+.safety > form > .safety-box > .safety-button {
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+}
+.safety > form > .safety-box > .safety-button > .safety-yes {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.safety > form > .safety-box > .safety-button > .safety-yes > button {
+  width: 100%;
+  height: 100%;
+  border-style: none;
+  background-color: #264db5;
+  color: white;
+  font-size: 25px;
+}
+.safety > form > .safety-box > .safety-button > .safety-no {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.safety > form > .safety-box > .safety-button > .safety-no > .safety-no-Btn {
+  width: 100%;
+  height: 100%;
+  background-color: #264db5;
+  color: white;
+  font-size: 25px;
+  border-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px solid;
+}
+.modal-back {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgb(0, 0, 0, 0.6);
+  z-index: 999;
+  display: none;
 }
