@@ -22,9 +22,9 @@ header > .inner > .box {
 }
 header > .inner > .box > .logo {
   height: 100px;
-  font-size: 60px;
-  font-family: "BIZ UDPGothic", sans-serif;
-  font-family: "Tilt Neon", cursive;
+  font-size: 73px;
+  font-family: "Racing Sans One", cursive;
+  color: #2a4383;
 }
 header > .inner > .box > .log-out {
   width: 400px;

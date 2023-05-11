@@ -79,20 +79,23 @@ header > .inner > .box > .log-out > .logout-text {
   display: flex;
   justify-content: center;
 }
-.main-box > nav {
+nav {
   margin-top: 30px;
-  /* width: 400px;*/
-  /* height: 600px; */
+  /* width: 400px;
+  height: 600px; */
   /* background-color: #111111; */
+  position: fixed;
+  left: calc(50% - 600px);
+  transform: translate(0, -50%);
 }
-.main-box > nav > .navinner {
+nav > .navinner {
   width: 300px;
   height: 600px;
   border: 2px solid #236dc7;
   border-radius: 20px;
   position: absolute;
 }
-.main-box > nav > .navinner > .img {
+nav > .navinner > .img {
   width: 234px;
   height: 100px;
   background-image: url("https://www.sejong.go.kr/template/A/images/lnb_irA.png");
@@ -100,7 +103,7 @@ header > .inner > .box > .log-out > .logout-text {
   top: -110px;
   left: 35px;
 }
-.main-box > nav > .navinner > .nav-name {
+nav > .navinner > .nav-name {
   position: relative;
   width: 200px;
   height: 60px;
@@ -115,7 +118,7 @@ header > .inner > .box > .log-out > .logout-text {
   color: white;
   font-size: 20px;
 }
-.main-box > nav > .navinner > .nav-name::after {
+nav > .navinner > .nav-name::after {
   position: absolute;
   top: -1px;
   right: -11px;
@@ -125,7 +128,7 @@ header > .inner > .box > .log-out > .logout-text {
   border-top: 7px solid #002560;
   transform: rotate(-90deg);
 }
-.main-box > nav > .navinner > .list {
+nav > .navinner > .list {
   width: 300px;
   display: flex;
   flex-direction: column;
@@ -133,7 +136,7 @@ header > .inner > .box > .log-out > .logout-text {
   position: relative;
   top: -100px;
 }
-.main-box > nav > .navinner > .list > p {
+nav > .navinner > .list > p {
   width: 300px;
   height: 80px;
   background-color: white;
@@ -145,7 +148,7 @@ header > .inner > .box > .log-out > .logout-text {
   margin: 0;
   padding: 0;
 }
-.main-box > nav > .navinner > .list > p:hover {
+nav > .navinner > .list > p:hover {
   background-color: #0059b5;
   color: white;
 }
@@ -163,10 +166,6 @@ header > .inner > .box > .log-out > .logout-text {
   background-color: #f5f5f5;
   display: flex;
   border: 1px solid #dddddd;
-  /* box-shadow: 0px 1.7px 2.2px rgba(0, 0, 0, 0.02),
-    0px 4px 5.3px rgba(0, 0, 0, 0.028), 0px 7.5px 10px rgba(0, 0, 0, 0.035),
-    0px 13.4px 17.9px rgba(0, 0, 0, 0.042),
-    0px 25.1px 33.4px rgba(0, 0, 0, 0.05), 0px 60px 80px rgba(0, 0, 0, 0.07); */
 }
 .main-box > .main-inner > .each-box > .title-box {
   width: 200px;
@@ -174,9 +173,7 @@ header > .inner > .box > .log-out > .logout-text {
   color: #013e68;
   font-size: 30px;
   font-family: "Kosugi", sans-serif;
-  /* font-weight: bold; */
   display: flex;
-  /* justify-content: center; */
   padding-top: 30px;
   padding-left: 30px;
 }

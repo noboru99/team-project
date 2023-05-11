@@ -1,21 +1,10 @@
 const navBtn = document.querySelectorAll(".list p");
 const mainBox = document.querySelectorAll(".title-box");
-const navBox = document.querySelector(".navinner");
-console.log(navBox);
-
+const navBox = document.querySelector(".navinner ");
+const footer = document.querySelector(".footer");
 for (let i = 0; i < navBtn.length; i++) {
-  console.log("forOk");
   navBtn[i].addEventListener("click", () => {
-    console.log("eventOK");
-    console.log(mainBox[i].getBoundingClientRect().top);
-    console.log(navBtn[i]);
-    console.log(mainBox[i]);
-    console.log(navBox);
     window.scrollTo({
-      top: mainBox[i].getBoundingClientRect().top,
-      behavior: "smooth",
-    });
-    navBox.scrollTo({
       top: mainBox[i].getBoundingClientRect().top,
       behavior: "smooth",
     });

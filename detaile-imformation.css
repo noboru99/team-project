@@ -3,7 +3,7 @@ body {
   padding: 0;
   width: 100%;
   height: 100%;
-  background-color: rgb(219, 233, 245);
+  background-color: whitesmoke;
 }
 .inner {
   margin: 0 auto;
@@ -49,67 +49,17 @@ header > .inner > .box > .log-out > .logout-text {
   background-color: white;
   font-family: "Kosugi Maru", sans-serif;
 }
-main {
-  margin: 0 auto;
-  width: 100%;
-}
-a {
-  text-decoration: none;
-  color: inherit;
-}
 
-table {
-  width: 90%;
-  border-collapse: collapse;
-  border: 5px solid #2a4383;
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-
-table tr {
-  border-bottom: solid 2px #2a4383;
-}
-
-table tr:last-child {
-  border-bottom: none;
-}
-
-table th {
-  position: relative;
-  text-align: left;
-  width: 30%;
-  background-color: white;
-  color: black;
-  text-align: center;
-  padding: 10px 0;
-}
-
-table th:after {
-  display: block;
-  content: "";
-  width: 0px;
-  height: 0px;
-  position: absolute;
-  top: calc(50% - 10px);
-  right: -10px;
-  border-left: 10px solid #2a4383;
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-}
-
-table td {
-  text-align: left;
-  width: 70%;
-  text-align: center;
-  background-color: white;
-  padding: 10px 0;
-}
 footer {
   width: 100%;
-  height: 150px;
-  background-color: #2a4383;
+  height: 80px;
+  padding: 20px 0 30px;
+  font-size: 10px;
+  line-height: 15px;
+  text-align: center;
+  background-color: #dadada;
+  /* color: #999; */
+  color: #6a6a6a;
 }
 
 /* --------------------지금바로 등록하기 버튼-------------------- */
@@ -218,4 +168,121 @@ footer {
   background-color: rgb(0, 0, 0, 0.6);
   z-index: 999;
   display: none;
+}
+
+main {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+main > .inner {
+  width: 1200px;
+  height: 800px;
+}
+main > .inner > .box {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: whitesmoke;
+}
+main > .inner > .box > .box-header {
+  width: 1200px;
+  height: 100px;
+  background-color: #03166c;
+  color: white;
+  font-size: 40px;
+  font-family: "M PLUS 1p", sans-serif;
+  border: 1px solid #dddddd;
+  display: flex;
+  justify-content: center;
+}
+main > .inner > .box > .box-header > p {
+  width: 1000px;
+  height: 100px;
+  margin: 0;
+  padding: 0;
+  line-height: 100px;
+}
+main > .inner > .box > .imformation-box {
+  margin-top: 30px;
+  width: 1200px;
+  height: 600px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #dddddd;
+}
+main > .inner > .box > .imformation-box > .name-box {
+  width: 1200px;
+  height: 80px;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 3.75;
+}
+main > .inner > .box > .imformation-box > .name-box > p {
+  margin: 0;
+  padding: 0;
+  margin-left: 100px;
+  height: 80px;
+  width: 1000px;
+  border-bottom: 3px solid whitesmoke;
+}
+main > .inner > .box > .imformation-box > .detail-imformaition {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  height: 470px;
+}
+main
+  > .inner
+  > .box
+  > .imformation-box
+  > .detail-imformaition
+  > div:nth-child(odd)
+  > p {
+  margin-left: 100px;
+}
+main > .inner > .box > .imformation-box > .detail-imformaition > div {
+  width: 600px;
+  height: 117px;
+}
+main > .inner > .box > .imformation-box > .detail-imformaition > div > p {
+  margin: 0;
+  padding: 0;
+  width: 480px;
+  color: #454545;
+}
+main
+  > .inner
+  > .box
+  > .imformation-box
+  > .detail-imformaition
+  > div
+  > p:nth-child(2) {
+  margin-top: 10px;
+  height: 80px;
+}
+main
+  > .inner
+  > .box
+  > .imformation-box
+  > .detail-imformaition
+  > div
+  > p:nth-child(1) {
+  height: 27px;
+}
+main
+  > .inner
+  > .box
+  > .imformation-box
+  > .detail-imformaition
+  > div:nth-child(6)
+  > p:nth-child(2) {
+  height: 190px;
+}
+main > .inner > .box > .imformation-box > .detail-imformaition > div > .title {
+  border-bottom: 3px solid whitesmoke;
+  font-size: 20px;
 }
